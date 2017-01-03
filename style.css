@@ -1,0 +1,15 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: #EC6F66;
+    background: linear-gradient(to left, #EC6F66 , #F3A183);
+}
+
+canvas {
+    margin: 20px auto 0px auto;
+    background: #ECE9E6;
+    background: linear-gradient(to left, #ECE9E6 , #FFFFFF);
+    display: block;
+    border: 2px solid red;
+    box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.75);
+}
