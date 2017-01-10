@@ -1,4 +1,4 @@
-;function Game(sceneId) {
+function Game(sceneId) {
     this.scene = document.getElementById(sceneId);
     this.screen = this.scene.getContext("2d");
     this.gameSize = {width: this.screen.canvas.width, height: this.screen.canvas.height};
@@ -15,7 +15,7 @@
             if (e.keyCode === 39 && !game.bodies.snake.direction.left) game.bodies.snake.direction = {right: true};
             if (e.keyCode === 38 && !game.bodies.snake.direction.down) game.bodies.snake.direction = {up: true};
             if (e.keyCode === 40 && !game.bodies.snake.direction.up) game.bodies.snake.direction = {down: true};
-        }
+        };
         game.bodies.snake.tailPosition.push([game.bodies.snake.headPosition.x, game.bodies.snake.headPosition.y]);
         game.bodies.snake.headPosition.x += game.bodies.snake.direction.left ? -game.bodies.snake.size.width : game.bodies.snake.direction.right ? game.bodies.snake.size.width : 0;
         game.bodies.snake.headPosition.y += game.bodies.snake.direction.up ? -game.bodies.snake.size.height : game.bodies.snake.direction.down ? game.bodies.snake.size.height : 0;
@@ -43,7 +43,7 @@ function Snake(size) {
     this.length = 1;
     this.size = {width: size, height: size};
     this.direction = {right: true};
-    this.headPosition = {x: 0, y: 0 }
+    this.headPosition = {x: 0, y: 0 };
     this.tailPosition = [];
 }
-window.onload = function() { new Game("main-scene"); }
+window.onload = function() { new Game("main-scene"); };
